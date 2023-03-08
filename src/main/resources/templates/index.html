@@ -111,7 +111,7 @@
             </div>
             <div class="col">
                 <div class="d-flex flex-column align-self-center">
-                    <h4 th:text="${noticia.titulo}"></h4>
+                    <h4 style="cursor: pointer;" th:onclick="|location.href='/noticia/' + ${noticia.id}|" th:text="${noticia.titulo}"></h4>
                     <p th:text="'Autor: ' + ${noticia.autor}"></p>
                     <p style="overflow: hidden;max-height: 200px;" th:text="${noticia.descricao}"></p>
                 </div>

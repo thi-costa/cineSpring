@@ -42,6 +42,14 @@ public class NoticiaController {
         return "redirect:/noticia";
     }
 
+    @GetMapping("/{id}")
+    public String verNoticia(@PathVariable int id, Model model){
+        Noticia noticia = noticiaDAO.buscarPorId(id);
+        model.addAttribute("noticia", noticia);
+
+        return "noticia";
+    }
+
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
         Noticia noticia = noticiaDAO.buscarPorId(id);
