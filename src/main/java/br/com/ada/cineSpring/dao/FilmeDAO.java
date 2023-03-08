@@ -1,5 +1,6 @@
 package br.com.ada.cineSpring.dao;
 
+import br.com.ada.cineSpring.model.Ator;
 import br.com.ada.cineSpring.model.Filme;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -92,6 +93,7 @@ public class FilmeDAO {
 
             if(f.getId() == filme.getId()) filmes.set(i, filme);
         }
+        salvarArquivo();
     }
 
     public void favoritarFilme(int id){

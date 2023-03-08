@@ -10,7 +10,66 @@
     <h1>Editar Filme</h1>
     <div class="constant-values-container">
         <div class="col-sm-6">
-            <form th:object="${filme}" method="post" th:action="@{/filme/editar}">
+            <form th:object="${form}" method="post" th:action="@{/filme/editar}">
+                <fieldset>
+                    <legend>Informações sobre filme</legend>
+                    <input type="hidden" th:field="*{filme.id}">
+                    <input type="hidden" th:field="*{filme.dislike}">
+                    <input type="hidden" th:field="*{filme.like}">
+                    <input type="hidden" th:field="*{filme.favorite}">
+
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" th:field="*{filme.titulo}" required/>
+                    <br>
+
+                    <label for="genero">Gênero:</label>
+                    <input type="text" id="genero" name="genero" th:field="*{filme.genero}" required/>
+                    <br>
+
+                    <label for="duracao">Duração:</label>
+                    <input type="number" min="0" id="duracao" name="duracao" th:field="*{filme.duracao}" required/>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="sinopse">Sinopse:</label>
+                        <textarea class="form-control" id="sinopse" name="sinopse" th:field="*{filme.sinopse}" rows="3" required></textarea>
+                    </div>
+                    <br>
+
+                    <label for="imagem">Imagem:</label>
+                    <input type="text" id="imagem" name="imagem" th:field="*{filme.imagem}" required/>
+                    <br>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Atores do filme</legend>
+                    <label for="atores">Escolha os atores:</label>
+
+                    <select th:field="*{atoresIds}" multiple="multiple" class="form-control" name="atores" id="atores" style="height: 150px; overflow-y: auto;">
+                        <option
+                                th:each="ator: ${todos_atores}"
+                                th:value="${ator.id}"
+                                th:text="${ator.nome}"
+                        >Nome do Ator</option>
+                    </select>
+                    <!--<select multiple="multiple" class="form-control" name="atores" id="atores" style="height: 150px; overflow-y: auto;" disabled>
+                        <option
+                                th:each="ator: ${todos_atores}"
+                                th:value="${ator}"
+                                th:text="${ator.nome}"
+                                >Nome do Ator</option>
+                    </select>-->
+
+                </fieldset>
+
+                <button type="submit" class="btn btn-outline-primary">Salvar</button>
+                <a th:href="@{/filme}" class="btn btn-outline-danger" role="button">Cancelar</a>
+            </form>
+
+
+
+            <!--<form th:object="${filme}" method="post" th:action="@{/filme/editar}">
                 <input type="hidden" th:field="*{id}">
                 <input type="hidden" th:field="*{dislike}">
                 <input type="hidden" th:field="*{like}">
@@ -41,7 +100,7 @@
 
                 <button type="submit" class="btn btn-outline-primary">Salvar</button>
                 <a th:href="@{/}" class="btn btn-outline-danger" role="button">Cancelar</a>
-            </form>
+            </form>-->
 
         </div>
     </div>
