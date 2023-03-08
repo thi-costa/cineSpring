@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Adicionar Ator</title>
+</head>
+<body>
+<div class="container">
+  <h1>Adicionar Ator</h1>
+  <div class="constant-values-container">
+    <div class="col-sm-6">
+      <form th:object="${ator}" method="post" th:action="@{/ator/novo}">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" th:field="*{nome}" required/>
+        <br>
+
+        <label for="apelido">Apelido:</label>
+        <input type="text" id="apelido" name="apelido" th:field="*{apelido}" required/>
+        <br>
+
+        <label for="nacionalidade">Nacionalidade:</label>
+        <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" th:field="*{nacionalidade}" required/>
+        <br>
+
+        <label for="imagem">Imagem:</label>
+        <input type="text" id="imagem" name="imagem" th:field="*{imagem}" required/>
+        <br>
+
+
+        <button type="submit" class="btn btn-outline-primary">Salvar</button>
+        <a th:href="@{/ator}" class="btn btn-outline-danger" role="button">Cancelar</a>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
