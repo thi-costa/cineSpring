@@ -30,6 +30,17 @@ public class Filme {
         this.dislike = 0;
     }
 
+    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, List<Ator> atores) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.duracao = duracao;
+        this.sinopse = sinopse;
+        this.imagem = imagem;
+        this.like = 0;
+        this.dislike = 0;
+        this.atores = atores;
+    }
+
     public List<Ator> getAtores() {
         return atores;
     }
