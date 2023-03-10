@@ -30,6 +30,10 @@
                     <input type="number" min="0" id="duracao" name="duracao" th:field="*{filme.duracao}" required/>
                     <br>
 
+                    <label for="imdb">Duração:</label>
+                    <input type="number" max="10.0" step="7.2" min="0.0" id="imdb" name="imdb" th:field="*{filme.imdb}" required/>
+                    <br>
+
                     <div class="form-group">
                         <label for="sinopse">Sinopse:</label>
                         <textarea class="form-control" id="sinopse" name="sinopse" th:field="*{filme.sinopse}" rows="3" required></textarea>
@@ -53,13 +57,6 @@
                                 th:text="${ator.nome}"
                         >Nome do Ator</option>
                     </select>
-                    <!--<select multiple="multiple" class="form-control" name="atores" id="atores" style="height: 150px; overflow-y: auto;" disabled>
-                        <option
-                                th:each="ator: ${todos_atores}"
-                                th:value="${ator}"
-                                th:text="${ator.nome}"
-                                >Nome do Ator</option>
-                    </select>-->
 
                 </fieldset>
 
@@ -68,39 +65,6 @@
             </form>
 
 
-
-            <!--<form th:object="${filme}" method="post" th:action="@{/filme/editar}">
-                <input type="hidden" th:field="*{id}">
-                <input type="hidden" th:field="*{dislike}">
-                <input type="hidden" th:field="*{like}">
-                <input type="hidden" th:field="*{favorite}">
-
-                <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" th:field="*{titulo}" required/>
-                <br>
-
-                <label for="genero">Gênero:</label>
-                <input type="text" id="genero" name="genero" th:field="*{genero}" required/>
-                <br>
-
-                <label for="duracao">Duração:</label>
-                <input type="text" id="duracao" name="duracao" th:field="*{duracao}" required/>
-                <br>
-
-                <div class="form-group">
-                    <label for="sinopse">Sinopse:</label>
-                    <textarea class="form-control" id="sinopse" name="sinopse" th:field="*{sinopse}" rows="3"></textarea>
-                </div>
-                <br>
-
-                <label for="imagem">Imagem:</label>
-                <input type="text" id="imagem" name="imagem" th:field="*{imagem}" required/>
-                <br>
-
-
-                <button type="submit" class="btn btn-outline-primary">Salvar</button>
-                <a th:href="@{/}" class="btn btn-outline-danger" role="button">Cancelar</a>
-            </form>-->
 
         </div>
     </div>

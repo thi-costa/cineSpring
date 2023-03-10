@@ -34,6 +34,7 @@
         <h1 th:text="${filme.titulo}"></h1>
         <h4 th:text="${filme.genero}"></h4>
         <p th:text="${filme.duracao} + ' minutos'"></p>
+        <p th:text="'IMDB: ' + ${filme.imdb}"></p>
         <p th:text="${filme.sinopse}"></p>
         <p>
           <span th:text="${filme.like} + ' Likes'"></span>

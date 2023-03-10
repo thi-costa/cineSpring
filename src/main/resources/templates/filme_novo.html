@@ -25,6 +25,10 @@
                     <input type="number" min="0" id="duracao" name="duracao" th:field="*{filme.duracao}" required/>
                     <br>
 
+                    <label for="imdb">IMDB:</label>
+                    <input step="0.1" max="10.0" type="number" min="0.0" id="imdb" name="imdb" th:field="*{filme.imdb}" required/>
+                    <br>
+
                     <div class="form-group">
                         <label for="sinopse">Sinopse:</label>
                         <textarea class="form-control" id="sinopse" name="sinopse" th:field="*{filme.sinopse}" rows="3" required></textarea>

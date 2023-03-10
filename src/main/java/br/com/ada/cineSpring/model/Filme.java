@@ -9,6 +9,7 @@ public class Filme {
     private int id;
     private String titulo;
     private String genero;
+    private double imdb;
     private int duracao;
     private String sinopse;
     private String imagem;
@@ -20,7 +21,7 @@ public class Filme {
 
     }
 
-    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem) {
+    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, double imdb) {
         this.titulo = titulo;
         this.genero = genero;
         this.duracao = duracao;
@@ -28,6 +29,7 @@ public class Filme {
         this.imagem = imagem;
         this.like = 0;
         this.dislike = 0;
+        this.imdb = imdb;
     }
 
     public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, List<Ator> atores) {
@@ -39,6 +41,25 @@ public class Filme {
         this.like = 0;
         this.dislike = 0;
         this.atores = atores;
+    }
+    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, List<Ator> atores, double imdb) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.duracao = duracao;
+        this.sinopse = sinopse;
+        this.imagem = imagem;
+        this.like = 0;
+        this.dislike = 0;
+        this.atores = atores;
+        this.imdb = imdb;
+    }
+
+    public double getImdb() {
+        return imdb;
+    }
+
+    public void setImdb(double imdb) {
+        this.imdb = imdb;
     }
 
     public List<Ator> getAtores() {
