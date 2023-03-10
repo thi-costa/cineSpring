@@ -13,6 +13,7 @@ public class Filme {
     private int duracao;
     private String sinopse;
     private String imagem;
+    private String video;
     private int like;
     private int dislike;
     private boolean favorite = false;
@@ -21,37 +22,16 @@ public class Filme {
 
     }
 
-    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, double imdb) {
-        this.titulo = titulo;
-        this.genero = genero;
-        this.duracao = duracao;
-        this.sinopse = sinopse;
-        this.imagem = imagem;
-        this.like = 0;
-        this.dislike = 0;
-        this.imdb = imdb;
+    public String getVideo() {
+        return video;
     }
 
-    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, List<Ator> atores) {
-        this.titulo = titulo;
-        this.genero = genero;
-        this.duracao = duracao;
-        this.sinopse = sinopse;
-        this.imagem = imagem;
-        this.like = 0;
-        this.dislike = 0;
-        this.atores = atores;
+    public void setVideo(String video) {
+        this.video = video;
     }
-    public Filme(String titulo, String genero, int duracao, String sinopse, String imagem, List<Ator> atores, double imdb) {
-        this.titulo = titulo;
-        this.genero = genero;
-        this.duracao = duracao;
-        this.sinopse = sinopse;
-        this.imagem = imagem;
-        this.like = 0;
-        this.dislike = 0;
-        this.atores = atores;
-        this.imdb = imdb;
+
+    public boolean isFavorite() {
+        return favorite;
     }
 
     public double getImdb() {

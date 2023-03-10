@@ -31,7 +31,7 @@
                     <br>
 
                     <label for="imdb">Duração:</label>
-                    <input type="number" max="10.0" step="7.2" min="0.0" id="imdb" name="imdb" th:field="*{filme.imdb}" required/>
+                    <input type="number" max="10.0" step="0.1" min="0.0" id="imdb" name="imdb" th:field="*{filme.imdb}" required/>
                     <br>
 
                     <div class="form-group">
@@ -42,6 +42,10 @@
 
                     <label for="imagem">Imagem:</label>
                     <input type="text" id="imagem" name="imagem" th:field="*{filme.imagem}" required/>
+                    <br>
+
+                    <label for="video">Vídeo:</label>
+                    <input type="text" id="video" name="video" th:field="*{filme.video}" required/>
                     <br>
 
                 </fieldset>
