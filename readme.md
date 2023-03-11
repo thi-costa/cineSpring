@@ -39,6 +39,9 @@ This project is a web application built with Java Spring MVC, done for the bootc
 This project is a web application to navigate between news and movies information. It also has the required CRUD screens to use the application and filters to get the movies by the desired movie genre.
 
 # Features
+
+<img src="https://user-images.githubusercontent.com/41833533/224460307-f759311f-88e4-4cf6-bf81-4c183be30de2.gif" alt="Gif showing the funcionalities of the Project"/>
+
 * CRUD movies (with actors) and news
 * Specific movie screen shows all the movie details and also can show a video hosted in YouTube (like a trailer)
 * Filter movie by genre
